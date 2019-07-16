@@ -1,5 +1,4 @@
 # Stock-Inquiry
-https://hymanchoi.github.io/Stock-Inquiry/
 
 ### 说明：
 股票查询 (支持上证，深证，港股，美股查询)
@@ -46,4 +45,4 @@ https://hymanchoi.github.io/Stock-Inquiry/
 
 
 ### 使用技术：
-HTML + CSS + JavaScript + jQuery + Bootstrap + Vue.js
+Vue

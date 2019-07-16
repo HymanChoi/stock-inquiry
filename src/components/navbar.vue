@@ -1,8 +1,8 @@
 <template>
   <div id="navbar">
     <div class="navbar-header">股票查询 | Stock Searching</div>
-    <div class="navbar-body">
-      <span class="navber-option" v-for="(item, key) in nav" :key="key">{{item}}</span>
+    <div class="navbar-list">
+      <div class="navber-item" v-for="(item, key) in nav" :key="key">{{item}}</div>
     </div>
   </div>
 </template>
@@ -11,8 +11,12 @@
 export default {
   data() {
     return {
-      nav: ["上证", "深证", "港股", "美股"]
+      nav: ["全部", "上证", "深证", "港股", "美股"]
     };
   }
 };
 </script>
+
+<style lang="scss" scoped>
+</style>
+
