@@ -1,8 +1,23 @@
 <template>
   <div id="navbar">
-    <div class="navbar-header">股票查询 | Stock Searching</div>
-    <div class="navbar-list">
-      <div class="navber-item" v-for="(item, key) in nav" :key="key">{{item}}</div>
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">股票查询 | Stock Searching</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li
+              v-for="(item, key) of list"
+              :key="key"
+              :class="{active:active == item.text}"
+              @click="tab(item)"
+            >
+              <a>{{item.text}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -11,12 +26,24 @@
 export default {
   data() {
     return {
-      nav: ["全部", "上证", "深证", "港股", "美股"]
+      active: "全部",
+      list: [
+        { text: "全部" },
+        { text: "上证" },
+        { text: "深证" },
+        { text: "港股" },
+        { text: "美股" }
+      ]
     };
+  },
+  methods: {
+    tab(item) {
+      this.active = item.text;
+    }
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 </style>
 

@@ -1,0 +1,185 @@
+/* 清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* 全局样式 */
+#app {
+  color: #ffffff;
+  height: 600px;
+}
+
+/* 导航栏 */
+.navbar {
+  margin-bottom: 0px;
+  background-color: #5a5a5a;
+  border-color: #5a5a5a;
+  border-radius: 0%;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand:visited {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #cfcfcf;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #cfcfcf;
+}
+
+.showAll {
+  float: right;
+  margin-top: 13px;
+  margin-right: 28px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* 内容部分 */
+.part {
+  height: 708px;
+}
+
+.col-md-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.part2 {
+  width: 100%;
+  height: 236px;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+}
+
+.form-control {
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.color0 {
+  background-color: #555555;
+}
+
+.color1 {
+  background-color: #fa5a5a;
+}
+
+.color2 {
+  background-color: #ffcb4f;
+}
+
+.color3 {
+  background-color: #00be70;
+}
+
+.color4 {
+  background-color: #295ea4;
+}
+
+/* 展示区 */
+img {
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+span {
+  display: block;
+}
+
+.showHeader {
+  height: 130px;
+}
+
+.showImg {
+  width: 50%;
+  float: left;
+  margin-top: 30px;
+}
+
+.showName {
+  width: 50%;
+  height: 70px;
+  float: left;
+  padding-top: 30px;
+  padding-left: 10px;
+  font-size: 36px;
+}
+
+.showGid {
+  width: 50%;
+  height: 60px;
+  float: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.showMain {
+  height: 106px;
+  font-size: 16px;
+}
+
+.showData1 {
+  padding-top: 25px;
+  padding-left: 40px;
+  width: 50%;
+  float: left;
+}
+
+.showData2 {
+  padding-top: 25px;
+  padding-left: 10px;
+  width: 50%;
+  float: left;
+}
+
+.showData3 {
+  padding-top: 15px;
+  padding-left: 40px;
+  width: 50%;
+  float: left;
+}
+
+.showData4 {
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 50%;
+  float: left;
+}
