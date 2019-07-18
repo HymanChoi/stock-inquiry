@@ -13,48 +13,6 @@ li {
   cursor: pointer;
 }
 
-/* 全局样式 */
-#app {
-  color: #ffffff;
-  height: 600px;
-}
-
-/* 导航栏 */
-.navbar {
-  margin-bottom: 0px;
-  background-color: #5a5a5a;
-  border-color: #5a5a5a;
-  border-radius: 0%;
-}
-
-.navbar-default .navbar-brand {
-  color: #ffffff;
-}
-
-.navbar-default .navbar-brand:visited {
-  color: #ffffff;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: #cfcfcf;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #ffffff;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: #cfcfcf;
-}
-
-.showAll {
-  float: right;
-  margin-top: 13px;
-  margin-right: 28px;
-  font-size: 18px;
-  color: #ffffff;
-}
-
 /* 内容部分 */
 .part {
   height: 708px;

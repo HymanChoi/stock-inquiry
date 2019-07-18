@@ -1,22 +1,20 @@
 <template>
-  <div id="navbar">
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">股票查询 | Stock Searching</a>
-        </div>
-        <div>
-          <ul class="nav navbar-nav">
-            <li
-              v-for="(item, key) of list"
-              :key="key"
-              :class="{active:active == item.text}"
-              @click="tab(item)"
-            >
-              <a>{{item.text}}</a>
-            </li>
-          </ul>
-        </div>
+  <div id="navbar" class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">股票查询 | Stock Searching</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li
+            v-for="(item, key) of list"
+            :key="key"
+            :class="{active:active == item.text}"
+            @click="tab(item)"
+          >
+            <a>{{item.text}}</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -45,5 +43,8 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  margin-bottom: 0;
+}
 </style>
 
