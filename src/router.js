@@ -16,5 +16,21 @@ export default new Router({
             path: "/",
             component: loadView("Home")
         },
+        {
+            path: "/SH",
+            component: loadView("SH")
+        },
+        {
+            path: "/SZ",
+            component: loadView("SZ")
+        },
+        {
+            path: "/HK",
+            component: loadView("HK")
+        },
+        {
+            path: "/US",
+            component: loadView("US")
+        }
     ]
 })

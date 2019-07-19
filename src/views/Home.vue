@@ -62,6 +62,9 @@ import axios from "axios";
 import _ from "lodash";
 
 export default {
+  components: {
+    navbar: Navbar
+  },
   data() {
     return {
       API_PROXY: "https://bird.ioliu.cn/v1/?url=",
@@ -150,9 +153,6 @@ export default {
         { text: "股本", value: "" }
       ]
     };
-  },
-  components: {
-    navbar: Navbar
   },
   watch: {
     gidSH() {

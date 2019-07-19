@@ -12,7 +12,9 @@
             :class="{active:active == item.text}"
             @click="tab(item)"
           >
-            <a>{{item.text}}</a>
+            <router-link :to="{path:'/'+item.value}">
+              <a>{{item.text}}</a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -24,15 +26,18 @@
 export default {
   data() {
     return {
-      active: "全部",
+      active: "",
       list: [
-        { text: "全部" },
-        { text: "上证" },
-        { text: "深证" },
-        { text: "港股" },
-        { text: "美股" }
+        { text: "全部", value: "" },
+        { text: "上证", value: "SH" },
+        { text: "深证", value: "SZ" },
+        { text: "港股", value: "HK" },
+        { text: "美股", value: "US" }
       ]
     };
+  },
+  mounted() {
+    this.tab()
   },
   methods: {
     tab(item) {

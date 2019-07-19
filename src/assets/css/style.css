@@ -13,6 +13,19 @@ li {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
 /* 颜色 */
 .color0 {
   background-color: #555555;
