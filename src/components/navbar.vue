@@ -12,9 +12,7 @@
             :class="{active:active == item.text}"
             @click="tab(item)"
           >
-            <router-link :to="{path:'/'+item.value}">
-              {{item.text}}
-            </router-link>
+            <router-link :to="{path:'/'+item.value}">{{item.text}}</router-link>
           </li>
         </ul>
       </div>
@@ -36,15 +34,18 @@ export default {
       ]
     };
   },
-  mounted() {
-    this.getStorage()
+  created() {
+    this.getStorage();
   },
   methods: {
     tab(item) {
-      localStorage.setItem("tab",item.text)
+      localStorage.setItem("tab", item.text);
     },
-    getStorage(){
-      this.active = localStorage.getItem("tab")
+    getStorage() {
+      let tab = localStorage.getItem("tab");
+      if (tab) {
+        this.active = tab;
+      }
     }
   }
 };
