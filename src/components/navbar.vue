@@ -13,7 +13,7 @@
             @click="tab(item)"
           >
             <router-link :to="{path:'/'+item.value}">
-              <a>{{item.text}}</a>
+              {{item.text}}
             </router-link>
           </li>
         </ul>
@@ -26,7 +26,7 @@
 export default {
   data() {
     return {
-      active: "",
+      active: "全部",
       list: [
         { text: "全部", value: "" },
         { text: "上证", value: "SH" },
