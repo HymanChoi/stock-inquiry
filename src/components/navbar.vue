@@ -37,11 +37,14 @@ export default {
     };
   },
   mounted() {
-    this.tab()
+    this.getStorage()
   },
   methods: {
     tab(item) {
-      this.active = item.text;
+      localStorage.setItem("tab",item.text)
+    },
+    getStorage(){
+      this.active = localStorage.getItem("tab")
     }
   }
 };

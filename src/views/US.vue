@@ -169,7 +169,6 @@ export default {
   watch: {
     gidUS() {
       if (this.gidUS) {
-        console.log(this.gidUS);
         this.showUS();
       } else {
         for (let i = 0; i < this.listUS.length; i++) {
