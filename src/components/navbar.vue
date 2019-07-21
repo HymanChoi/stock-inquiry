@@ -2,7 +2,7 @@
   <div id="navbar" class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">股票查询 | Stock Searching</a>
+        <a class="navbar-brand">股票查询 | Stock Searching</a>
       </div>
       <div>
         <ul class="nav navbar-nav">

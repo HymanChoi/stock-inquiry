@@ -242,4 +242,11 @@ export default {
 .col-md-9 {
   padding: 0;
 }
+.form-control {
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
 </style>
