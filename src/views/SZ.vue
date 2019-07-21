@@ -1,6 +1,5 @@
 <template>
   <div id="SZ">
-    <navbar></navbar>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 color2 part">
@@ -38,14 +37,10 @@
 </template>
 
 <script>
-import Navbar from "../components/navbar";
 import axios from "axios";
 import _ from "lodash";
 
 export default {
-  components: {
-    navbar: Navbar
-  },
   data() {
     return {
       API_PROXY: "https://bird.ioliu.cn/v1/?url=",
@@ -71,9 +66,9 @@ export default {
       list: [
         {
           color: "color1",
-          src: require("../assets/img/SH/601318.png"),
-          name: "中国平安",
-          gid: "601318",
+          src: require("../assets/img/SZ/002415.png"),
+          name: "海康威视",
+          gid: "002415",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -81,9 +76,9 @@ export default {
         },
         {
           color: "color3",
-          src: require("../assets/img/SH/601857.png"),
-          name: "中国石油",
-          gid: "601857",
+          src: require("../assets/img/SZ/002230.png"),
+          name: "科大讯飞",
+          gid: "002230",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -91,9 +86,9 @@ export default {
         },
         {
           color: "color4",
-          src: require("../assets/img/SH/600028.png"),
-          name: "中国石化",
-          gid: "600028",
+          src: require("../assets/img/SZ/002024.png"),
+          name: "苏宁易购",
+          gid: "002024",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -101,9 +96,9 @@ export default {
         },
         {
           color: "color3",
-          src: require("../assets/img/SH/601398.png"),
-          name: "工商银行",
-          gid: "601398",
+          src: require("../assets/img/SZ/000063.png"),
+          name: "中兴通讯",
+          gid: "000063",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -111,9 +106,9 @@ export default {
         },
         {
           color: "color4",
-          src: require("../assets/img/SH/601288.png"),
-          name: "农业银行",
-          gid: "601288",
+          src: require("../assets/img/SZ/002027.png"),
+          name: "分众传媒",
+          gid: "002027",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -121,9 +116,9 @@ export default {
         },
         {
           color: "color1",
-          src: require("../assets/img/SH/601318.png"),
-          name: "建设银行",
-          gid: "601318",
+          src: require("../assets/img/SZ/002195.png"),
+          name: "二三四五",
+          gid: "002195",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -131,9 +126,9 @@ export default {
         },
         {
           color: "color4",
-          src: require("../assets/img/SH/601939.png"),
-          name: "交通银行",
-          gid: "601939",
+          src: require("../assets/img/SZ/000651.png"),
+          name: "格力电器",
+          gid: "000651",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -141,9 +136,9 @@ export default {
         },
         {
           color: "color1",
-          src: require("../assets/img/SH/600030.png"),
-          name: "中信证券",
-          gid: "600030",
+          src: require("../assets/img/SZ/000002.png"),
+          name: "万科A",
+          gid: "000002",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -151,9 +146,9 @@ export default {
         },
         {
           color: "color3",
-          src: require("../assets/img/SH/600048.png"),
-          name: "保利地产",
-          gid: "600048",
+          src: require("../assets/img/SZ/300059.png"),
+          name: "东方财富",
+          gid: "300059",
           nowPri: { name: "当前价格", value: "" },
           increPer: { name: "涨跌百分比", value: "" },
           traNumber: { name: "成交量", value: "" },
@@ -180,7 +175,7 @@ export default {
       axios
         .get(
           this.API_PROXY +
-            "http://web.juhe.cn:8080/finance/stock/hs?gid=sh" +
+            "http://web.juhe.cn:8080/finance/stock/hs?gid=sz" +
             app.gidSZ +
             "&key=c95b13606a73270d34a65a3766e14d41"
         )
@@ -214,7 +209,7 @@ export default {
       axios
         .get(
           this.API_PROXY +
-            "http://web.juhe.cn:8080/finance/stock/hs?gid=sh" +
+            "http://web.juhe.cn:8080/finance/stock/hs?gid=sz" +
             app.list[key].gid +
             "&key=c95b13606a73270d34a65a3766e14d41"
         )

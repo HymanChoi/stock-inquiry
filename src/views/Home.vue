@@ -1,6 +1,5 @@
 <template>
   <div id="home">
-    <navbar></navbar>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 color1 part">
@@ -57,14 +56,10 @@
 </template>
 
 <script>
-import Navbar from "../components/navbar.vue";
 import axios from "axios";
 import _ from "lodash";
 
 export default {
-  components: {
-    navbar: Navbar
-  },
   data() {
     return {
       API_PROXY: "https://bird.ioliu.cn/v1/?url=",

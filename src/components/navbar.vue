@@ -9,8 +9,8 @@
           <li
             v-for="(item, key) of list"
             :key="key"
-            :class="{active:active == item.text}"
-            @click="tab(item)"
+            :class="{active:active == key}"
+            @click="tab(key)"
           >
             <router-link :to="{path:'/'+item.value}">{{item.text}}</router-link>
           </li>
@@ -24,7 +24,7 @@
 export default {
   data() {
     return {
-      active: "全部",
+      active: 0,
       list: [
         { text: "全部", value: "" },
         { text: "上证", value: "SH" },
@@ -34,18 +34,9 @@ export default {
       ]
     };
   },
-  created() {
-    this.getStorage();
-  },
   methods: {
-    tab(item) {
-      localStorage.setItem("tab", item.text);
-    },
-    getStorage() {
-      let tab = localStorage.getItem("tab");
-      if (tab) {
-        this.active = tab;
-      }
+    tab(key) {
+      this.active = key;
     }
   }
 };

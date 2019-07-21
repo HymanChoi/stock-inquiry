@@ -39,10 +39,10 @@
 
 |股票代码|股票名称|股票代码|股票名称|股票代码|股票名称|
 |:-----:|:------:|:-----:|:------:|:-----:|:------:|
-|appl     |苹果       |amzn  |亚马逊    |msft    |微软      |
-|baba    |阿里巴巴 |bidu   |百度       |nets     |网易      |
+|aapl     |苹果       |amzn  |亚马逊    |msft    |微软      |
+|baba    |阿里巴巴 |bidu   |百度       |ntes     |网易      |
 |pdd      |拼多多    |iq      |爱奇艺    |jd         |京东     |
 
 
 ### 使用技术：
-Vue
+vue + bootstrap + vue-router + axios + lodash

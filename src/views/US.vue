@@ -1,6 +1,5 @@
 <template>
   <div id="US">
-    <navbar></navbar>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 color4 part">
@@ -25,10 +24,10 @@
               <span class="showGid">{{item.gid}}</span>
             </div>
             <div class="showMain">
-              <span class="showData1">{{item.nowPri.name}}: {{item.nowPri.value}}</span>
-              <span class="showData2">{{item.increPer.name}}: {{item.increPer.value}}</span>
-              <span class="showData3">{{item.traNumber.name}}: {{item.traNumber.value}}</span>
-              <span class="showData4">{{item.traAmount.name}}: {{item.traAmount.value}}</span>
+              <span class="showData1">{{item.lastestpri.name}}: {{item.lastestpri.value}}</span>
+              <span class="showData2">{{item.limit.name}}: {{item.limit.value}}</span>
+              <span class="showData3">{{item.priearn.name}}: {{item.priearn.value}}</span>
+              <span class="showData4">{{item.markValue.name}}: {{item.markValue.value}}</span>
             </div>
           </div>
         </div>
@@ -38,14 +37,10 @@
 </template>
 
 <script>
-import Navbar from "../components/navbar";
 import axios from "axios";
 import _ from "lodash";
 
 export default {
-  components: {
-    navbar: Navbar
-  },
   data() {
     return {
       API_PROXY: "https://bird.ioliu.cn/v1/?url=",
@@ -63,8 +58,8 @@ export default {
         { text: "当前价格", value: "" },
         { text: "今日最高价", value: "" },
         { text: "今日最低价", value: "" },
-        { text: "成交量", value: "" },
-        { text: "平均成交量", value: "" },
+        { text: "市盈率", value: "" },
+        { text: "平均市盈率", value: "" },
         { text: "市值", value: "" },
         { text: "市盈率", value: "" },
         { text: "收益率", value: "" },
@@ -75,93 +70,93 @@ export default {
       list: [
         {
           color: "color2",
-          src: require("../assets/img/SH/601318.png"),
-          name: "中国平安",
-          gid: "601318",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/aapl.png"),
+          name: "苹果",
+          gid: "aapl",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color3",
-          src: require("../assets/img/SH/601857.png"),
-          name: "中国石油",
-          gid: "601857",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/amzn.png"),
+          name: "亚马逊",
+          gid: "amzn",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color1",
-          src: require("../assets/img/SH/600028.png"),
-          name: "中国石化",
-          gid: "600028",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/msft.png"),
+          name: "微软",
+          gid: "msft",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color3",
-          src: require("../assets/img/SH/601398.png"),
-          name: "工商银行",
-          gid: "601398",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/baba.png"),
+          name: "阿里巴巴",
+          gid: "baba",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color1",
-          src: require("../assets/img/SH/601288.png"),
-          name: "农业银行",
-          gid: "601288",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/bidu.png"),
+          name: "百度",
+          gid: "bidu",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color2",
-          src: require("../assets/img/SH/601318.png"),
-          name: "建设银行",
-          gid: "601318",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/ntes.png"),
+          name: "网易",
+          gid: "ntes",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color1",
-          src: require("../assets/img/SH/601939.png"),
-          name: "交通银行",
-          gid: "601939",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/pdd.png"),
+          name: "拼多多",
+          gid: "pdd",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color2",
-          src: require("../assets/img/SH/600030.png"),
-          name: "中信证券",
-          gid: "600030",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/iq.png"),
+          name: "爱奇艺",
+          gid: "iq",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         },
         {
           color: "color3",
-          src: require("../assets/img/SH/600048.png"),
-          name: "保利地产",
-          gid: "600048",
-          nowPri: { name: "当前价格", value: "" },
-          increPer: { name: "涨跌百分比", value: "" },
-          traNumber: { name: "成交量", value: "" },
-          traAmount: { name: "成交额", value: "" }
+          src: require("../assets/img/US/jd.png"),
+          name: "京东",
+          gid: "jd",
+          lastestpri: { name: "当前价格", value: "" },
+          limit: { name: "涨跌百分比", value: "" },
+          priearn: { name: "市盈率", value: "" },
+          markValue: { name: "市值", value: "" }
         }
       ]
     };
@@ -223,29 +218,28 @@ export default {
       axios
         .get(
           this.API_PROXY +
-            "http://web.juhe.cn:8080/finance/stock/hs?gid=sh" +
+            "http://web.juhe.cn:8080/finance/stock/usa?gid=" +
             app.list[key].gid +
             "&key=c95b13606a73270d34a65a3766e14d41"
         )
-        .then(function(res) {
-          if (res.data.result[0].data.increPer >= 0) {
-            app.list[key].increPer.value =
-              res.data.result[0].data.increPer + " ⇱";
+        .then(function(response) {
+          if (response.data.result[0].data.limit >= 0) {
+            app.list[key].limit.value = response.data.result[0].data.limit + " ⇱";
           } else {
-            app.list[key].increPer.value =
-              res.data.result[0].data.increPer + " ⇲";
+            app.list[key].limit.value = response.data.result[0].data.limit + " ⇲";
           }
-          app.list[key].nowPri.value =
-            Math.floor(res.data.result[0].data.nowPri * 100) / 100;
-          app.list[key].traAmount.value =
-            (res.data.result[0].data.traAmount / 1e8).toFixed(2) + "亿(CNY)";
-          app.list[key].traNumber.value = res.data.result[0].data.traNumber;
+          app.list[key].lastestpri.value =
+            Math.floor(response.data.result[0].data.lastestpri * 100) / 100;
+          app.list[key].markValue.value =
+            (response.data.result[0].data.markValue / 1e8).toFixed(2) +
+            "亿(USD)";
+          app.list[key].priearn.value = response.data.result[0].data.priearn;
         })
         .catch(function() {
-          app.list[key].nowPri.value = "Invalid!";
-          app.list[key].increPer.value = "Invalid!";
-          app.list[key].traNumber.value = "Invalid!";
-          app.list[key].traAmount.value = "Invalid!";
+          app.list[key].limit.value = "Invalid!";
+          app.list[key].lastestpri.value = "Invalid!";
+          app.list[key].markValue.value = "Invalid!";
+          app.list[key].priearn.value = "Invalid!";
         });
     }
   }
