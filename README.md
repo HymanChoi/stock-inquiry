@@ -1,6 +1,7 @@
 # 股票查询
 ### 项目介绍
-这是一个股票查询网页 (支持上证，深证，港股，美股查询)。[项目预览](https://hymanchoi.github.io/Stock-Inquiry/dist/index.html)
+这是一个股票查询网页 (支持上证，深证，港股，美股查询)。  
+[项目预览](https://hymanchoi.github.io/Stock-Inquiry/dist/index.html)
 
 ### 项目技术
 vue + bootstrap + vue-router + axios + lodash
