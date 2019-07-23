@@ -9,15 +9,11 @@ function loadView(view) {
 }
 
 export default new Router({
-    mode: "history",
+    mode: "hash",
     base: process.env.BASE_URL,
     routes: [
         {
-            path: '/',
-            redirect: '/Home'
-        },
-        {
-            path: "/Home",
+            path: "/",
             component: loadView("Home")
         },
         {
