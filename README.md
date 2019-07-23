@@ -1,12 +1,28 @@
-# Stock-Inquiry
+# 股票查询
+### 项目介绍
+这是一个股票查询网页 (支持上证，深证，港股，美股查询)。[项目预览](https://hymanchoi.github.io/Stock-Inquiry/dist/index.html)
 
-### 说明：
-股票查询 (支持上证，深证，港股，美股查询)
+### 使用技术
+vue + bootstrap + vue-router + axios + lodash
 
+### 安装教程
 
-### 实现功能：
+1. 安装依赖
+```
+npm install/cnpm install
+```
+2. 运行项目
+```
+npm run serve
+```
+3. 压缩打包
+```
+npm run build
+```
+
+### 使用说明
 1.输入上证，深证，港股或美股股票编号，即可显示最新股票信息  
-2.每个股票市场提供了九支股票，点击图片即可显示最新股票信息，点击 “全部显示” 按钮即可全部显示  
+2.每个股票市场提供了九支股票，点击图片即可显示最新股票信息 
 
 上证:  
 
@@ -42,7 +58,3 @@
 |aapl     |苹果       |amzn  |亚马逊    |msft    |微软      |
 |baba    |阿里巴巴 |bidu   |百度       |ntes     |网易      |
 |pdd      |拼多多    |iq      |爱奇艺    |jd         |京东     |
-
-
-### 使用技术：
-vue + bootstrap + vue-router + axios + lodash
